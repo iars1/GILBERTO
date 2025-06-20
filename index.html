@@ -18,6 +18,9 @@
       padding: 30px;
       text-align: center;
       box-shadow: 0 0 10px #FFD700;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
@@ -34,11 +37,17 @@
     }
     nav a:hover {
       color: white;
+      text-shadow: 0 0 5px #FFD700;
     }
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .hero {
       text-align: center;
@@ -58,6 +67,7 @@
       color: #FFD700;
       font-family: 'Playfair Display', serif;
       font-size: 1.8em;
+      margin-top: 20px;
     }
     .button {
       display: inline-block;
@@ -73,6 +83,11 @@
     }
     .button:hover {
       background-color: #d6b300;
+      transform: scale(1.05);
+    }
+    ul li {
+      margin: 10px 0;
+      font-size: 1.1em;
     }
     footer {
       background-color: #000000;
@@ -148,5 +163,6 @@
   </footer>
 </body>
 </html>
+
 
 
