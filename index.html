@@ -193,6 +193,34 @@
   </div>
 </section>
 
+  <section id="oferta" style="text-align:center; padding:40px 20px; background:#111; border-top:1px solid #444;">
+    <h2 style="color:#CBA135;">Oferta por tiempo limitado</h2>
+    <p style="color:#ccc; font-size:1.1em;">Adquiere tus libros favoritos con envío inmediato. La oferta finaliza en:</p>
+    <div id="contador" style="font-size:2em; margin-top:15px; color:#ff5e00; font-weight:bold;"></div>
+    <script>
+      function iniciarContador(dias) {
+        const final = new Date().getTime() + dias * 24 * 60 * 60 * 1000;
+        const reloj = document.getElementById("contador");
+        setInterval(() => {
+          const ahora = new Date().getTime();
+          const tiempoRestante = final - ahora;
+          if (tiempoRestante <= 0) {
+            reloj.innerHTML = "¡Últimas horas!";
+            reloj.style.color = "red";
+            return;
+          }
+          const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+          const horas = Math.floor((tiempoRestante / (1000 * 60 * 60)) % 24);
+          const minutos = Math.floor((tiempoRestante / (1000 * 60)) % 60);
+          const segundos = Math.floor((tiempoRestante / 1000) % 60);
+          reloj.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+          if (tiempoRestante < 60000) reloj.style.color = "#ff0000";
+        }, 1000);
+      }
+      iniciarContador(3);
+    </script>
+  </section>
+
   <section id="blog">
     <h2 style="color:#CBA135;">Blog / Pensamientos</h2>
     <p>Reflexiones y ensayos literarios del autor sobre educación, cultura, y sociedad...</p>
@@ -217,6 +245,9 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
     </div>
   </footer>
+<a href="https://wa.me/51979274728" target="_blank" style="position:fixed; bottom:20px; right:20px; background-color:#25D366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:1000; text-decoration:none;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:30px; height:30px;">
+</a>
 </body>
 </html>
 
