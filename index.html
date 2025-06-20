@@ -14,15 +14,15 @@
       color: #F5F5F5;
     }
     header {
-      background-color: #0B0F29;
-      padding: 20px;
+      background: linear-gradient(to right, #FFD700, #0B0F29);
+      padding: 30px;
       text-align: center;
-      border-bottom: 2px solid #FFD700;
+      box-shadow: 0 0 10px #FFD700;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
       color: #FFD700;
-      font-size: 2.5em;
+      font-size: 3em;
       margin: 0;
     }
     nav a {
@@ -30,17 +30,23 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: white;
     }
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
     .hero {
       text-align: center;
-      background: linear-gradient(145deg, #FFD700 0%, #0B0F29 100%);
-      padding: 50px 20px;
-      border-radius: 8px;
+      background: url('https://cdn.pixabay.com/photo/2022/10/22/18/08/abstract-7538134_960_720.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #FFD700 inset;
     }
     .hero img {
       width: 100%;
@@ -51,27 +57,35 @@
     .hero h2 {
       color: #FFD700;
       font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
     }
     .button {
       display: inline-block;
       background-color: #FFD700;
       color: #0B0F29;
-      padding: 10px 20px;
-      margin-top: 20px;
+      padding: 12px 28px;
+      margin-top: 25px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
+      box-shadow: 0 0 10px #FFD700;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background-color: #d6b300;
     }
     footer {
       background-color: #000000;
       color: #cccccc;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
+      border-top: 2px solid #FFD700;
     }
     .payment-logos img {
       height: 30px;
       margin: 0 10px;
       vertical-align: middle;
+      filter: brightness(1.2);
     }
   </style>
 </head>
@@ -117,9 +131,9 @@
     <h2 style="color:#FFD700;">Contacto</h2>
     <p>¿Deseas contratar al autor para una conferencia, adquirir libros o entrevistas educativas? Escríbenos.</p>
     <form>
-      <input type="text" placeholder="Tu nombre" required><br>
-      <input type="email" placeholder="Tu email" required><br>
-      <textarea placeholder="Tu mensaje" rows="5" required></textarea><br>
+      <input type="text" placeholder="Tu nombre" required><br><br>
+      <input type="email" placeholder="Tu email" required><br><br>
+      <textarea placeholder="Tu mensaje" rows="5" required></textarea><br><br>
       <button class="button" type="submit">Enviar mensaje</button>
     </form>
   </section>
@@ -134,4 +148,5 @@
   </footer>
 </body>
 </html>
+
 
