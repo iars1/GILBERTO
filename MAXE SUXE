@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gilberto Maxe Suxe | La voz de un pueblo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0A1F44;
+      color: #F5F5F5;
+    }
+    header {
+      background-color: #0A1F44;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #FFD700;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #FFD700;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    nav a {
+      color: #FFD700;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 700px;
+      border: 5px solid #FFD700;
+      border-radius: 10px;
+    }
+    .hero h2 {
+      color: #FFD700;
+      font-family: 'Playfair Display', serif;
+    }
+    .button {
+      display: inline-block;
+      background-color: #FFD700;
+      color: #0A1F44;
+      padding: 10px 20px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #000000;
+      color: #cccccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .payment-logos img {
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GILBERTO MAXE SUXE</h1>
+    <p>La voz de un pueblo, el saber literario</p>
+    <nav>
+      <a href="#autor">Sobre el autor</a>
+      <a href="#obras">Obras</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="/ruta-de-tu-imagen-destacada.jpg" alt="Gilberto Maxe Suxe en su escritorio" />
+    <h2>“Escribo lo que callan los pueblos. Enseño lo que cura el alma.”</h2>
+    <a class="button" href="#obras">Ver Obras</a>
+  </section>
+
+  <section id="autor">
+    <h2>Sobre el autor</h2>
+    <p>Nacido en Tostén, Santa Cruz (Cajamarca), Gilberto Maxe Suxe es un escritor y educador con una profunda trayectoria en la narrativa regional andina...</p>
+  </section>
+
+  <section id="obras">
+    <h2>Obras</h2>
+    <ul>
+      <li><strong>Los tres consejos</strong> (2022)</li>
+      <li><strong>El diálogo de las infelices</strong> (2003)</li>
+      <li><strong>El tabardillo</strong> (2009)</li>
+      <li><strong>La casa del tío Lule</strong> (2015)</li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <h2>Blog / Pensamientos</h2>
+    <p>Reflexiones y ensayos literarios del autor sobre educación, cultura, y sociedad...</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Deseas contratar al autor para una conferencia, adquirir libros o entrevistas educativas? Escríbenos.</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required><br>
+      <input type="email" placeholder="Tu email" required><br>
+      <textarea placeholder="Tu mensaje" rows="5" required></textarea><br>
+      <button class="button" type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Gilberto Maxe Suxe. Todos los derechos reservados.</p>
+    <div class="payment-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MasterCard_logo.png" alt="MasterCard" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
+    </div>
+  </footer>
+</body>
+</html>
