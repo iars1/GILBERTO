@@ -9,21 +9,20 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
-      color: #1c1c1c;
+      font-family: 'Cinzel', serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
     }
     header {
-      background: linear-gradient(135deg, #000000, #111111);
+      background: linear-gradient(135deg, #000000, #1a1a1a);
       padding: 30px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(27, 38, 59, 0.5);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     header h1 {
-      font-family: 'Cinzel', serif;
       color: #CBA135;
       font-size: 3em;
       margin: 0;
@@ -51,10 +50,10 @@
     }
     .hero {
       text-align: center;
-      background: linear-gradient(135deg, #1C2C5B, #1A1A1A);
+      background: linear-gradient(135deg, #111111, #1A1A1A);
       padding: 80px 20px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(13, 27, 42, 0.3);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     }
     .hero img {
       width: 100%;
@@ -64,7 +63,6 @@
     }
     .hero h2 {
       color: #CBA135;
-      font-family: 'Playfair Display', serif;
       font-size: 1.8em;
       margin-top: 20px;
     }
@@ -89,7 +87,7 @@
       font-size: 1.1em;
     }
     footer {
-      background-color: #0D1B2A;
+      background-color: #000000;
       color: #bdc3c7;
       text-align: center;
       padding: 40px 20px;
@@ -120,9 +118,35 @@
     <h2>“Escribo lo que callan los pueblos. Enseño lo que cura el alma.”</h2>
     <a class="button" href="#obras">Ver Obras</a>
   </section>
-  <section style="background:#000000; color:#CBA135; padding:40px; text-align:center; font-size:1.5em; font-style:italic;">
-    “Un pueblo que no escribe, no se recuerda.” – Gilberto Maxe Suxe
-  </section>
+  <section style="background: linear-gradient(135deg, #111111, #1a1a1a); color:#CBA135; padding:50px 20px; text-align:center; font-size:1.5em; font-style:italic; border-radius:12px; margin: 40px auto; max-width: 900px; box-shadow: 0 0 15px rgba(255,255,255,0.05);">
+  <span id="frase-gilberto">“Un pueblo que no escribe, no se recuerda.” – Gilberto Maxe Suxe</span>
+  <script>
+    const frase = document.getElementById("frase-gilberto");
+    const texto = frase.textContent;
+    frase.textContent = "";
+    let i = 0;
+    const escribir = () => {
+      if (i < texto.length) {
+        frase.textContent += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 40);
+      }
+    };
+    escribir();
+    const audio = new Audio("https://cdn.pixabay.com/download/audio/2022/03/16/audio_43eb9c8a3a.mp3?filename=typewriter-1-185275.mp3");
+  audio.volume = 0.2;
+  const escribir = () => {
+    if (i < texto.length) {
+      frase.textContent += texto.charAt(i);
+      audio.currentTime = 0;
+      audio.play();
+      i++;
+      setTimeout(escribir, 50);
+    }
+  };
+  escribir();
+</script>
+</section>
   $1
     <blockquote style="font-style:italic; max-width:700px; margin:20px auto;">
       “Gracias a sus textos, entendí mejor la historia del Perú desde Alemania.”<br><span style="font-weight:bold;">– Lector internacional</span>
@@ -195,5 +219,6 @@
   </footer>
 </body>
 </html>
+
 
 
